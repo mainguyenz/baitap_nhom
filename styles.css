@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f1f1f;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* KHUNG CHÍNH */
+main {
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* THANH ĐIỀU HƯỚNG */
+.div_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    background-color: #2b2b2b;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    margin: 20px 0;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* NAV CHÍNH */
+.navigation--main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* KHUNG CHỌN TRANG */
+.nav_inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background-color: #3a3a3a;
+
+    padding: 6px 10px;
+
+    border-radius: 10px;
+}
+
+/* LINK CHUNG */
+a {
+    text-decoration: none;
+    color: white;
+
+    transition: 0.25s;
+}
+
+/* HOME - MENU - CHỌN TRANG - YÊU THÍCH */
+.home,
+.menu,
+.love,
+.check__line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 45px;
+    height: 40px;
+
+    padding: 0 15px;
+
+    border-radius: 8px;
+
+    background-color: #3b3b3b;
+}
+
+/* NÚT MŨI TÊN */
+.arrow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 8px;
+
+    background-color: #4a4a4a;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* HIỆU ỨNG */
+.home:hover,
+.menu:hover,
+.love:hover,
+.check__line:hover,
+.arrow-box:hover {
+    background-color: #3b82f6;
+
+    transform: translateY(-5px);
+
+    color: white;
+}
+
+/* KHU VỰC TRUYỆN */
+.sction__main {
+    text-align: center;
+}
+
+/* ẢNH TRUYỆN */
+.sction__main img {
+    display: block;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto 5px auto;
+
+    border-radius: 4px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* THANH CUỘN */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2b2b2b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+/* thanh cuộn */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
