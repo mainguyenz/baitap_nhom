@@ -55,6 +55,55 @@
         <!-- chỉnh theo nhóm-->
 
     </footer>
+    <script>
+        window.onload = function () {
+
+            const navs = document.querySelectorAll(".div_main");
+
+            const navTop = navs[0];
+            const navBottom = navs[1];
+
+            let lastScroll = 0;
+
+            window.addEventListener("scroll", function () {
+
+                const currentScroll = window.scrollY;
+
+                /* đầu trang */
+                if (currentScroll <= 100) {
+                    navTop.classList.remove("fixed-top");
+                    navTop.classList.remove("fixed-bottom");
+                    lastScroll = currentScroll;
+                    return;
+                }
+
+                /* chạm thanh cuối */
+                const bottomTop = navBottom.offsetTop;
+
+                if (currentScroll + window.innerHeight >= bottomTop) {
+                    navTop.classList.remove("fixed-top");
+                    navTop.classList.remove("fixed-bottom");
+                    lastScroll = currentScroll;
+                    return;
+                }
+
+                /* cuộn xuống */
+                if (currentScroll > lastScroll) {
+                    navTop.classList.remove("fixed-top");
+                    navTop.classList.add("fixed-bottom");
+                }
+
+                /* cuộn lên */
+                else {
+                    navTop.classList.remove("fixed-bottom");
+                    navTop.classList.add("fixed-top");
+                }
+
+                lastScroll = currentScroll;
+            });
+
+        };
+    </script>
 </body>
 
 </html>

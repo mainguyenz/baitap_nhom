@@ -30,8 +30,9 @@ main {
     padding: 15px 20px;
 
     border-radius: 12px;
-
-    margin: 20px 0;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -150,4 +151,26 @@ a {
 /* thanh cuộn */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.fixed-top {
+    position: fixed;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    border-radius: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    border-radius: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+
 }
